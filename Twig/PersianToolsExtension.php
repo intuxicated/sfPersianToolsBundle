@@ -28,7 +28,7 @@ class PersianToolsExtension extends \Twig_Extension
         );
     }
 
-    public function priceFilter($timestamp = NULL,$format)
+    public function pdateFilter($timestamp = NULL,$format)
     {
         $PT = new PersianTools();
         return $PT->pdate($format,$timestamp);
