@@ -99,6 +99,8 @@ class PersianToolsExtension extends \Twig_Extension
     }
 
     /**
+     * return true if year is intercalary
+     *
      * @param $year
      * @return int
      */
