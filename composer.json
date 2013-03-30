@@ -1,5 +1,5 @@
 {
-    "name": "intuxicated/PersianToolsBundle",
+    "name": "intuxicated/persian-tools-bundle",
     "type": "library",
     "description": "Persian Tools for Symfony 2",
     "keywords": ["pdate,persian number,persian,tools,persian tools"],
