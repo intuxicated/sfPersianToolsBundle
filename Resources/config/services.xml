@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="intuxicated.lib.persiantools.class">Intuxicated\PersianToolsBundle\Lib</parameter>
+    </parameters>
+
+    <services>
+        <service id="intuxicated.twig.persian_tools_extension" class="Intuxicated\PersianToolsBundle\Twig\PersianToolsExtension">
+            <argument type="service" id="intuxicated.lib.persiantools.class" />
+            <tag name="twig.extension" />
+        </service>
+    </services>
+
+</container>
