@@ -1,0 +1,5 @@
+services:
+    twig.persian_tools_extension:
+        class: Intuxicated\PersianToolsBundle\Twig\PersianToolsExtension
+        tags:
+            - { name: twig.extension }

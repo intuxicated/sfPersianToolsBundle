@@ -23,10 +23,6 @@ use Intuxicated\PersianToolsBundle\DependencyInjection\PerisanToolsExtension;
 
 class PersianToolsBundle extends Bundle
 {
-    public function build(ContainerBuilder $container)
-    {
-        parent::build($container);
-        $container->registerExtension(new PerisanToolsExtension());
-    }
+    
 
 }
