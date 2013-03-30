@@ -1,0 +1,30 @@
+{
+    "name": "intuxicated/PersianToolsBundle",
+    "type": "library",
+    "description": "Persian Tools for Symfony 2",
+    "keywords": ["pdate,persian number,persian,tools,persian tools"],
+    "homepage": "http://intuxicated.ir",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Mohammad Niknam",
+            "email": "hidensoft@gmail.com"
+        }
+    ],
+    "require": {
+        "php":                      ">=5.3.3",
+        "symfony/framework-bundle": "~2.0",
+        "twig/twig":                "~1.5"
+    },
+    "autoload": {
+        "psr-0": {
+            "Intuxicated\\sfPersianToolsBundle": ""
+        }
+    },
+    "target-dir": "Intuxicated/sfPersianToolsBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}
