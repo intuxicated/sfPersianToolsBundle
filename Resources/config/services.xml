@@ -8,7 +8,7 @@
     </parameters>
 
     <services>
-        <service id="intuxicated.twig.persian_tools_extension" class="Intuxicated\PersianToolsBundle\Twig\IPTExtension">
+        <service id="intuxicated.twig.persian_tools_extension" class="Intuxicated\PersianToolsBundle\Twig\PersianToolsExtension">
             <argument type="service" id="intuxicated.lib.persiantools.class" />
             <tag name="twig.extension" />
         </service>
