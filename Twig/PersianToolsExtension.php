@@ -109,6 +109,8 @@ class PersianToolsExtension extends \Twig_Extension
     }
 
     /**
+     * @see http://www.php.net/manual/en/function.mktime.php
+     *
      * @param int $hour
      * @param int $minute
      * @param int $second
@@ -123,6 +125,8 @@ class PersianToolsExtension extends \Twig_Extension
     }
 
     /**
+     * @see http://www.php.net/manual/en/function.checkdate.php
+     *
      * @param $month
      * @param $day
      * @param $year
@@ -133,6 +137,8 @@ class PersianToolsExtension extends \Twig_Extension
     }
 
     /**
+     * @see http://www.php.net/manual/en/function.getdate.php
+     * 
      * @param null $timestamp
      * @return array
      */
