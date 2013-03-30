@@ -18,10 +18,10 @@
     },
     "autoload": {
         "psr-0": {
-            "Intuxicated\\sfPersianToolsBundle": ""
+            "Intuxicated\\PersianToolsBundle": ""
         }
     },
-    "target-dir": "Intuxicated/sfPersianToolsBundle",
+    "target-dir": "Intuxicated/PersianToolsBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "0.1-dev"
