@@ -35,6 +35,7 @@ class PersianToolsExtension extends \Twig_Extension
     {
         return array(
             'pdate' => new \Twig_Filter_Method($this, 'pdateFilter'),
+            'pnumber'=> new \Twig_Filter_Method($this,'pnumberFilter'),
         );
     }
 
@@ -63,6 +64,15 @@ class PersianToolsExtension extends \Twig_Extension
     public function pdateFilter($timestamp = NULL,$format = 'Y-m-d')
     {
         return $this->pt->pdate($format,$timestamp);
+    }
+
+    /**
+     * @param $string
+     * @return string
+     */
+    public function pnumberFilter($string)
+    {
+        return $this->pt->pnumber($string);
     }
 
     /**
@@ -138,7 +148,7 @@ class PersianToolsExtension extends \Twig_Extension
 
     /**
      * @see http://www.php.net/manual/en/function.getdate.php
-     * 
+     *
      * @param null $timestamp
      * @return array
      */

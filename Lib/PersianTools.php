@@ -27,6 +27,23 @@ class PersianTools {
     private $pdate_week_name = array('شنبه', 'یکشنبه', 'دوشنبه', 'سه شنبه', 'چهارشنبه', 'پنج شنبه', 'جمعه');
     private $pdate_month_days = array(0, 31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 29);
 
+    private $persian_digits    =    array('۰','۱','۲','۳','۴','۵','۶','۷','۸','۹');
+    private $arabic_digits    =    array('٠','١','٢','٣','٤','٥','٦','٧','٨','٩');
+    private $english_digits    =    array('0','1','2','3','4','5','6','7','8','9');
+
+    /**
+     * convert numbers to persian numbers
+     *
+     * @param $string
+     * @return string
+     */
+    function pnumber($string){
+        $string = str_replace($this->english_digits, $this->persian_digits, $string);
+        $string = str_replace($this->english_digits, $this->arabic_digits, $string);
+
+        return $string;
+    }
+
     function pdate($format, $timestamp = NULL)
     {
         $pdate_month_name = $this->pdate_month_name;
