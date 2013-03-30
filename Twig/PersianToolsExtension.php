@@ -21,6 +21,9 @@ use Intuxicated\PersianToolsBundle\Lib\PersianTools;
 
 class PersianToolsExtension extends \Twig_Extension
 {
+    /**
+     * @var \Intuxicated\PersianToolsBundle\Lib\PersianTools
+     */
     private $pt;
 
     public function __construct()
@@ -42,17 +45,97 @@ class PersianToolsExtension extends \Twig_Extension
     {
         return array(
             'pdate' => new \Twig_Function_Method($this, 'pdate_fnc', array('is_safe' => array('html'))),
+            'pstrftime' => new \Twig_Function_Method($this,'pstrftime_fnc',array('is_safe'=>array('html'))),
+            'DayOfYear' => new \Twig_Function_Method($this,'DayOfYear_fnc',array('is_safe'=>array('html'))),
+            'isKabise' => new \Twig_Function_Method($this,'isKabise_fnc',array('is_safe'=>array('html'))),
+            'pmktime' => new \Twig_Function_Method($this,'pmktime_fnc',array('is_safe'=>array('html'))),
+            'pcheckdate' => new \Twig_Function_Method($this,'pcheckdate_fnc',array('is_safe'=>array('html'))),
+            'pgetdate' => new \Twig_Function_Method($this,'pgetdate_fnc',array('is_safe'=>array('html'))),
         );
     }
+
+    /**
+     * @param null $timestamp
+     * @param string $format
+     * @return string
+     */
 
     public function pdateFilter($timestamp = NULL,$format = 'Y-m-d')
     {
         return $this->pt->pdate($format,$timestamp);
     }
 
-    public function pdate_fnc($format,$timestamp = NULL)
+    /**
+     * @see http://www.php.net/manual/en/function.date.php
+     * @param string $format
+     * @param null $timestamp
+     * @return string
+     */
+    public function pdate_fnc($format = 'Y-m-d',$timestamp = NULL)
     {
         return $this->pt->pdate($format,$timestamp);
+    }
+
+    /**
+     * @see http://www.php.net/manual/en/function.strftime.php
+     * @param $format
+     * @param null $timestamp
+     * @return string
+     */
+    function pstrftime_fnc($format, $timestamp = NULL){
+        return $this->pt->pstrftime($format,$timestamp);
+    }
+
+    /**
+     * return days number of a month
+     *
+     * @param $pMonth
+     * @param $pDay
+     * @return int
+     */
+    public function DayOfYear_fnc($pMonth, $pDay)
+    {
+        return $this->pt->DayOfYear($pMonth,$pDay);
+    }
+
+    /**
+     * @param $year
+     * @return int
+     */
+    function isKabise_fnc($year) {
+        return $this->pt->isKabise($year);
+    }
+
+    /**
+     * @param int $hour
+     * @param int $minute
+     * @param int $second
+     * @param int $month
+     * @param int $day
+     * @param int $year
+     * @param $is_dst
+     * @return mixed
+     */
+    function pmktime_fnc($hour = 0, $minute = 0, $second = 0, $month = 0, $day = 0, $year = 0, $is_dst = -1){
+        return $this->pmktime($hour, $minute, $second, $month, $day, $year, $is_dst);
+    }
+
+    /**
+     * @param $month
+     * @param $day
+     * @param $year
+     * @return int
+     */
+    function pcheckdate_fnc($month, $day, $year){
+        return $this->pt->pcheckdate($month,$day,$year);
+    }
+
+    /**
+     * @param null $timestamp
+     * @return array
+     */
+    function pgetdate_fnc($timestamp = NULL){
+        return $this->pt->pgetdate($timestamp);
     }
 
     public function getName()
