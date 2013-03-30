@@ -15,27 +15,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-namespace intuxicated\PersianToolsBundle\Twig;
+namespace Intuxicated\PersianToolsBundle;
 
-use Intuxicated\PersianToolsBundle\Lib\PersianTools;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Intuxicated\PersianToolsBundle\DependencyInjection\PerisanToolsExtension;
 
-class PersianToolsExtension extends \Twig_Extension
+class PersianToolsBundle extends Bundle
 {
-    public function getFilters()
+    public function build(ContainerBuilder $container)
     {
-        return array(
-            'pdate' => new \Twig_Filter_Method($this, 'pdateFilter'),
-        );
+        parent::build($container);
+        $container->registerExtension(new PerisanToolsExtension());
     }
 
-    public function pdateFilter($timestamp = NULL,$format)
-    {
-        $PT = new PersianTools();
-        return $PT->pdate($format,$timestamp);
-    }
-
-    public function getName()
-    {
-        return 'persian_tools_extension';
-    }
 }
