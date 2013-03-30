@@ -18,11 +18,5 @@
 namespace Intuxicated\PersianToolsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Intuxicated\PersianToolsBundle\DependencyInjection\PerisanToolsExtension;
 
-class PersianToolsBundle extends Bundle
-{
-    
-
-}
+class PersianToolsBundle extends Bundle {}
