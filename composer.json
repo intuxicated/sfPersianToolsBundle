@@ -9,6 +9,10 @@
         {
             "name": "Mohammad Niknam",
             "email": "hidensoft@gmail.com"
+        },
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/intuxicated/sfPersianToolsBundle/contributors"
         }
     ],
     "require": {

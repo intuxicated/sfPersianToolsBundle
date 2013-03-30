@@ -21,6 +21,13 @@ use Intuxicated\PersianToolsBundle\Lib\PersianTools;
 
 class PersianToolsExtension extends \Twig_Extension
 {
+    private $pt;
+
+    public function __construct()
+    {
+        $this->pt = new PersianTools;
+    }
+
     public function getFilters()
     {
         return array(
@@ -28,10 +35,24 @@ class PersianToolsExtension extends \Twig_Extension
         );
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function getFunctions()
+    {
+        return array(
+            'pdate' => new \Twig_Function_Method($this, 'pdate_fnc', array('is_safe' => array('html'))),
+        );
+    }
+
     public function pdateFilter($timestamp = NULL,$format = 'Y-m-d')
     {
-        $PT = new PersianTools();
-        return $PT->pdate($format,$timestamp);
+        return $this->pt->pdate($format,$timestamp);
+    }
+
+    public function pdate_fnc($format,$timestamp = NULL)
+    {
+        return $this->pt->pdate($format,$timestamp);
     }
 
     public function getName()
