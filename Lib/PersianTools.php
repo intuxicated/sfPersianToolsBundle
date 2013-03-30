@@ -19,7 +19,7 @@
  * @author Vahid Sohrablou (IranPHP.org)
  */
 
-namespace Intuxicated/PersianToolsBundle/Lib;
+namespace Intuxicated\PersianToolsBundle\Lib;
 
 class PersianTools {
 

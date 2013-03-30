@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-namespace intuxicated/PersianToolsBundle/Twig;
+namespace intuxicated\PersianToolsBundle\Twig;
 
-use Intuxicated/PersianToolsBundle/Lib/PersoanTools;
+use Intuxicated\PersianToolsBundle\Lib\PersianTools;
 
 class PersianToolsExtension extends \Twig_Extension
 {
