@@ -2,7 +2,7 @@
     "name": "intuxicated/persian-tools-bundle",
     "type": "library",
     "description": "Persian Tools for Symfony 2",
-    "keywords": ["pdate,persian number,persian,tools,persian tools"],
+    "keywords": ["pdate", "persian number", "persian", "tools", "persian tools"],
     "homepage": "http://intuxicated.ir",
     "license": "GPL",
     "authors": [
