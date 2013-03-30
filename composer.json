@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Intuxicated\\PersianToolsBundle": ""
+            "Intuxicated\\PersianToolsBundle\\": ""
         }
     },
     "target-dir": "Intuxicated/PersianToolsBundle",
