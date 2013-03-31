@@ -111,7 +111,7 @@ class PersianToolsExtension extends \Twig_Extension
     }
 
     /**
-     * return days number of a month
+     * return days
      *
      * @param $pMonth
      * @param $pDay
