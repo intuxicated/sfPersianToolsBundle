@@ -73,4 +73,4 @@ isKabise `return true if year is intercalary`
 
 License
 -------------
-GPLv3 , (more information)[https://github.com/intuxicated/sfPersianToolsBundle/blob/master/LICENSE]
+(GPLv3)[https://github.com/intuxicated/sfPersianToolsBundle/blob/master/LICENSE "more information"]
