@@ -1,7 +1,7 @@
 sfPersianTools
 =============
 
-Persian tools for [Sumfony](http://symfony.com/ "Symfony") framework.
+Persian tools for [Symfony](http://symfony.com/ "Symfony") framework.
 
 Installation
 -------------
@@ -73,5 +73,5 @@ isKabise `return true if year is intercalary`
 
 License
 -------------
-(GPLv3)[https://github.com/intuxicated/sfPersianToolsBundle/blob/master/LICENSE "more information"]
+https://github.com/intuxicated/sfPersianToolsBundle/blob/master/LICENSE
 
