@@ -73,6 +73,10 @@ DayOfYear `return past days of the year`
 
 isKabise `return true if year is intercalary`
 
+pnumber `convert English/Arabic numbers to Persian numbers`
+
+pletter `convert Arabic letters to Persian Letters`
+
 License
 -------------
 https://github.com/intuxicated/sfPersianToolsBundle/blob/master/LICENSE

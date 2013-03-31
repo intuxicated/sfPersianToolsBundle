@@ -53,6 +53,8 @@ class PersianToolsExtension extends \Twig_Extension
             'pmktime' => new \Twig_Function_Method($this,'pmktime_fnc',array('is_safe'=>array('html'))),
             'pcheckdate' => new \Twig_Function_Method($this,'pcheckdate_fnc',array('is_safe'=>array('html'))),
             'pgetdate' => new \Twig_Function_Method($this,'pgetdate_fnc',array('is_safe'=>array('html'))),
+            'pnumber' => new \Twig_Function_Method($this,'pnumber_fnc',array('is_safe'=>array('html'))),
+            'pletter' => new \Twig_Function_Method($this,'pletter_fnc',array('is_safe'=>array('html'))),
         );
     }
 
@@ -168,6 +170,28 @@ class PersianToolsExtension extends \Twig_Extension
      */
     function pgetdate_fnc($timestamp = NULL){
         return $this->pt->pgetdate($timestamp);
+    }
+
+    /**
+     * Convert English/Arabic numbers to Persian numbers
+     *
+     * @param $string
+     * @return mixed
+     */
+    public function pnumber_fnc($string)
+    {
+        return $this->pt->pnumber($string);
+    }
+
+    /**
+     * Convert Arabic letters to Persian Letters
+     *
+     * @param $string
+     * @return mixed
+     */
+    public function pletter_fnc($string)
+    {
+        return $this->pt->pletter($string);
     }
 
     public function getName()
