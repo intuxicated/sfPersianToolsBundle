@@ -3,6 +3,8 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
+        <service id="persian_tools" class="Intuxicated\PersianToolsBundle\Lib\PersianTools">
+        </service>
         <service id="twig.persian_tools_extension" class="Intuxicated\PersianToolsBundle\Twig\PersianToolsExtension">
             <tag name="twig.extension" />
         </service>
