@@ -3,6 +3,8 @@ sfPersianTools
 
 Persian tools for [Symfony](http://symfony.com/ "Symfony") framework.
 
+[![knpbundles.com](http://knpbundles.com/intuxicated/sfPersianToolsBundle/badge)](http://knpbundles.com/intuxicated/sfPersianToolsBundle)
+
 Installation
 -------------
 
