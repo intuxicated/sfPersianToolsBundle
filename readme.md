@@ -58,11 +58,17 @@ Twig Functions
 -------------
 
 [pdate](http://www.php.net/manual/en/function.date.php)
+
 [pstrftime](http://www.php.net/manual/en/function.strftime.php)
+
 [pmktime](http://www.php.net/manual/en/function.mktime.php)
+
 [pcheckdate](http://www.php.net/manual/en/function.checkdate.php)
+
 [pgetdate](http://www.php.net/manual/en/function.getdate.php)
+
 DayOfYear `return past days of the year`
+
 isKabise `return true if year is intercalary`
 
 License
