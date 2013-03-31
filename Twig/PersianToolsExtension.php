@@ -34,8 +34,9 @@ class PersianToolsExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'pdate' => new \Twig_Filter_Method($this, 'pdateFilter'),
+            'pdate' =>  new \Twig_Filter_Method($this, 'pdateFilter'),
             'pnumber'=> new \Twig_Filter_Method($this,'pnumberFilter'),
+            'pletter'=> new \Twig_Filter_Method($this, 'pletterFilter'),
         );
     }
 
@@ -67,12 +68,25 @@ class PersianToolsExtension extends \Twig_Extension
     }
 
     /**
+     * Convert arabic and english numbers to persian number
+     *
      * @param $string
      * @return string
      */
     public function pnumberFilter($string)
     {
         return $this->pt->pnumber($string);
+    }
+
+    /**
+     * Convert arabic letters to persian
+     *
+     * @param $string
+     * @return mixed
+     */
+    public function pletterFilter($string)
+    {
+        return $this->pt->pletter($string);
     }
 
     /**

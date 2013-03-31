@@ -31,18 +31,23 @@ class PersianTools {
     private $arabic_digits    =    array('٠','١','٢','٣','٤','٥','٦','٧','٨','٩');
     private $english_digits    =    array('0','1','2','3','4','5','6','7','8','9');
 
-    /**
-     * convert numbers to persian numbers
-     *
-     * @param $string
-     * @return string
-     */
-    function pnumber($string){
-        $string = str_replace($this->english_digits, $this->persian_digits, $string);
-        $string = str_replace($this->english_digits, $this->arabic_digits, $string);
+    private $arabic_letters = array('ۀ','ى','ي','ك');
+    private $persian_letters = array('ه','ی','ی','ک');
+
+
+    function pletter($string){
+        $string = str_replace($this->arabic_letters,$this->persian_letters,$string);
 
         return $string;
     }
+
+    function pnumber($string){
+        $string = str_replace($this->english_digits, $this->persian_digits, $string);
+        $string = str_replace($this->arabic_digits, $this->persian_digits, $string);
+
+        return $string;
+    }
+
 
     function pdate($format, $timestamp = NULL)
     {
