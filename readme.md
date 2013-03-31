@@ -77,6 +77,18 @@ pnumber `convert English/Arabic numbers to Persian numbers`
 
 pletter `convert Arabic letters to Persian Letters`
 
+Controller Functions
+-------------
+You can use all twig functions in controller. just simply load `persian_tools` service :
+
+```php
+$pt = $this->get('persian_tools');
+
+// example
+echo $pt->pnumber('123456');
+```
+
+
 License
 -------------
 https://github.com/intuxicated/sfPersianToolsBundle/blob/master/LICENSE
