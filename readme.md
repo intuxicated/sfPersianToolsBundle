@@ -6,7 +6,7 @@ Persian tools for [Symfony](http://symfony.com/ "Symfony") framework.
 Installation
 -------------
 
-### Step 1: Download PersianToolsBundle using composer ###
+### Download PersianToolsBundle using composer ###
 
 Add PersianToolsBundle in your composer.json
 
