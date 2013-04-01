@@ -4,7 +4,7 @@
     "description": "Persian Tools for Symfony 2",
     "keywords": ["pdate", "persian number", "persian", "tools", "persian tools"],
     "homepage": "http://intuxicated.ir",
-    "license": "GPL",
+    "license": "MIT",
     "authors": [
         {
             "name": "Mohammad Niknam",
