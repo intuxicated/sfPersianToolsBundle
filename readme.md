@@ -15,7 +15,7 @@ Add PersianToolsBundle in your composer.json
 ```json
 {
     "require": {
-        "intuxicated/persian-tools-bundle": "0.1.*@dev"
+        "intuxicated/persian-tools-bundle": "dev-master"
     }
 }
 ```
