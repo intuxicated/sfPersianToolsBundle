@@ -572,4 +572,25 @@ class PersianTools {
 
         return array($gy, $i + 1, $g_day_no + 1);
     }
+
+    /**
+     * Check if input string is a valid iranian national code
+     *
+     * @param string $input National Code
+     * @return boolean Input validity as a Iranian national code string
+     * @author Ebrahim Byagowi
+     */
+    function isValidIranianNationalCode($input) {
+        # check if input has 10 digits that all of them are not equal
+        if (!preg_match("/^(?!(\d)\1{9})\d{10}$/", $input)) {
+            return false;
+        }
+
+        $check = (int) $input[9];
+        $sum = array_sum(array_map(function ($x) use ($input) {
+            return ((int) $input[$x]) * (10 - $x);
+        }, range(0, 8))) % 11;
+
+        return $sum < 2 && $check == $sum || $sum >= 2 && $check + $sum == 11;
+    }
 }
