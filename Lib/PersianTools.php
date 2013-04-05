@@ -579,10 +579,10 @@ class PersianTools {
      * @param string $input National Code
      * @return boolean Input validity as a Iranian national code string
      * @author Ebrahim Byagowi
+     * @link http://gist.github.com/ebraminio/5292017
      */
     function isValidIranianNationalCode($input) {
-        # check if input has 10 digits that all of them are not equal
-        if (!preg_match("/^(?!(\d)\1{9})\d{10}$/", $input)) {
+        if (!preg_match("/^\d{10}$/", $input)) {
             return false;
         }
 
